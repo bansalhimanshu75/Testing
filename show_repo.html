@@ -1,0 +1,26 @@
+<!-- 	
+
+						Kellton Tech Sol. Lmt
+						270, Phase 2 
+						Udyog Vihar
+						Gurgaon (122001)
+						Haryana (India)
+
+--> 
+
+<html>
+	<head>
+		<title>Repository Page</title>
+	</head>
+	<body>
+		<font color = "red"><p>
+			<b>Note :</b> If you want to deploy code via get clone then enter the value of textfield. 
+		</font></p>
+		<form action = {{"/clone_repo/"}} method="post">
+		{% csrf_token %}
+			<input type ='text' name = "gitclone_deploy" value = "/var/www/html/">
+			<input type ='hidden' name = "repo_name" value = "{{item}}">			
+			<input type = "submit" value = "Deploy">
+		</form>
+	</body>
+</html>
